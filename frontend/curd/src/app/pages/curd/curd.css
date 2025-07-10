@@ -1,0 +1,74 @@
+.bg{
+  background-color:#212121;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #fff;
+}
+input,input:focus{
+  border: 0.5px solid  #00b8d4;
+  background-color: transparent;
+  color: #ffffff;
+
+
+}
+input::placeholder {
+  color: #888888; /* Choose your preferred color */
+  opacity: 1;     /* Optional: ensures full color visibility */
+}
+
+.action{
+  color: #fff;
+}
+.action:active{
+  color: #000000;
+}
+table{
+  background-color: transparent;
+}
+table,th,td{
+  border: .8px solid #654bcf7e;
+  background-color: transparent;
+  color: #fff;
+}
+td{
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.centertext{
+  text-align: center;
+  text-transform: capitalize;
+}
+
+#sm{
+  margin-bottom: 5px;
+}
+.delete-btn,.edit-btn{
+  border-radius: 15px;
+}
+.edit-btn{
+  background-color: #8BC34A; /* Your specified lime green */
+  color: white; /* Or a dark text color if your background is light */
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.edit-btn:hover{
+  background-color: #689F38;
+}
+
+.delete-btn{
+  background-color: #D32F2F; /* Your specified red */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease; 
+}
+.delete-btn:hover{
+  background-color: #B71C1C;
+}

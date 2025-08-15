@@ -14,7 +14,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./curd.css'],
 })
 export class Curd implements OnInit {
-  baseUrl = 'http://localhost:3000';
+  baseUrl = 'https://user-crud-backend-5v09.onrender.com';
   usersbd: any[] = [];
   usersonsave: any[] = [];
   editMode = false;

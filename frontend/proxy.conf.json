@@ -1,6 +1,6 @@
 {
     "/api": {
-        "target": "http://localhost:3000",
+        "target": "https://user-crud-backend-5v09.onrender.com",
         "secure": false
     }
 }

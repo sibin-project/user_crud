@@ -14,6 +14,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./curd.css'],
 })
 export class Curd implements OnInit {
+  baseUrl = 'http://localhost:3000';
   usersbd: any[] = [];
   usersonsave: any[] = [];
   editMode = false;
@@ -34,7 +35,7 @@ editUserId: number | null = null;
 
   getusers() {
     this.apiService
-      .get('http://localhost:3000/api/users')
+      .get(`${this.baseUrl}/api/users`)
       .subscribe((res: any) => {
         this.usersbd = res;
       });
@@ -48,7 +49,7 @@ editUserId: number | null = null;
   if (this.editMode && this.editUserId !== null) {
     // Edit
     this.apiService
-      .put(`http://localhost:3000/api/users/${this.editUserId}`, formData)
+      .put(`${this.baseUrl}/api/users/${this.editUserId}`, formData)
       .subscribe(() => {
         this.getusers();
         this.userForm.reset();
@@ -57,7 +58,7 @@ editUserId: number | null = null;
       });
   } else {
     // Add
-    this.apiService.post('http://localhost:3000/postusers', formData).subscribe(() => {
+    this.apiService.post(`${this.baseUrl}/postusers`, formData).subscribe(() => {
       this.getusers();
       this.userForm.reset();
     });
@@ -75,7 +76,7 @@ onEdit(user: any) {
 
 onDelete(id: number) {
   if (confirm('Are you sure to delete this user?')) {
-    this.apiService.delete(`http://localhost:3000/api/users/${id}`).subscribe(() => {
+    this.apiService.delete(`${this.baseUrl}/api/users/${id}`).subscribe(() => {
       this.getusers();
     });
   }
